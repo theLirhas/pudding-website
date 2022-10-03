@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contoh tata letak yang menunjukkan tabel harga responsif.">
+    <title>Ordinary Pudding</title>
+    <link rel="stylesheet" href="/css/pure/pure-min.css">
+    <link rel="stylesheet" href="/css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="/layouts/pricing/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+ /*
+ * -- GAYA DASAR --
+ * Sebagian besar diwarisi dari Base, tetapi saya ingin mengubah beberapa.
+ */
+body {
+  color: #526066;
+}
+
+h2,
+h3 {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6em;
+}
+* {
+  scroll-behavior: smooth;
+  
+}
+
+/*
+ * -- Gaya Tata Letak --
+ */
+.l-content {
+  margin: 0 auto;
+}
+
+.l-box {
+  padding: 0.5em 2em;
+}
+
+/*
+ * -- GAYA MENU --
+ menu memiliki bayangan kotak yang sangat samar.
+ */
+.pure-menu {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pure-menu-link {
+  padding: 0.5em 0.7em;
+}
+
+/*
+ * -- BANNER --
+ * Spanduk atas dengan judul. Dengan menggunakan kombinasi
+ * dari `display: table;` dan `display: table-cell;`, kita bisa
+ * -- BANNER --
+ * Spanduk atas dengan judul. Dengan menggunakan kombinasi
+ * dari `display: table;` dan `display: table-cell;`, kita bisa
+ * pusatkan teks secara vertikal.
+ */
+
+.banner {
+  background: transparent
+    url("https://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg")
+    0 0 no-repeat fixed;
+  text-align: center;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
+
+  height: 200px;
+  width: 100%;
+  margin-bottom: 3em;
+  display: table;
+}
+
+.banner-head {
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 2em;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 1px 1px black;
+}
+
+/*
+ * -- HARGA TABEL WRAPPER --
+ * Elemen ini membungkus semua elemen tabel harga.
+ */
+.pricing-tables,
+.information {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.pricing-tables {
+  margin-bottom: 3.125em;
+  text-align: center;
+}
+
+/*
+ * -- TABEL HARGA --
+ * Setiap tabel harga memiliki kelas .pricing-table
+ */
+.pricing-table {
+  border: 1px solid #ddd;
+  margin: 0 0.5em 2em;
+  padding: 0 0 3em;
+}
+
+/*
+ * -- HARGA TABEL HEADER WARNA --
+ * Pilih warna yang berbeda berdasarkan jenis tabel harga.
+ */
+.pricing-table-free .pricing-table-header {
+  background-image: url("puddingsutera.jpg");
+}
+
+.pricing-table-biz .pricing-table-header {
+  background: #ff7400;
+}
+
+/*
+ * -- KEPALA TABEL HARGA --
+ * Secara default, header berwarna hitam/putih, dan memiliki beberapa gaya untuk nama <h2>.
+ */
+.pricing-table-header {
+  background: #bd7e4a;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.pricing-table-header h2 {
+  margin: 0;
+  padding-top: 2em;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/*
+ * -- HARGA TABEL HARGA --
+ * Gaya untuk harga dan <span>per bulan</span> yang sesuai
+ */
+.pricing-table-price {
+  font-size: 6em;
+  margin: 0.2em 0 0;
+  font-weight: 100;
+}
+.pricing-table-price span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.2em;
+  padding-bottom: 2em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  *color: #fff;
+}
+
+/*
+ * -- DAFTAR TABEL HARGA --
+ * Setiap tabel harga memiliki <ul> yang dilambangkan dengan .pricing-table-list class
+ */
+.pricing-table-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/*
+ * -- ELEMEN DAFTAR TABEL HARGA --
+ * Gaya untuk elemen daftar individual dalam setiap tabel harga
+ */
+.pricing-table-list li {
+  padding: 0.8em 0;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+/*
+ * -- TOMBOL TABEL HARGA --
+ * Gaya untuk tombol "Pilih" di bagian bawah tabel harga.
+ * Ini mewarisi dari Tombol Murni.
+ */
+.button-choose {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  border-radius: 2em;
+  font-weight: bold;
+  position: relative;
+  bottom: -1.5em;
+}
+
+.information-head {
+  color: black;
+  font-weight: 500;
+}
+
+.footerBody {
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'sogoe UI';
+  font-weight: 400;
+  background-color: #ededed;
+}
+.footer {
+  padding: 40px 0;
+  background-color: #363636;
+}
+.footer .sosial {
+  text-align: center;
+  padding-bottom: 25px;
+  color: white;
+}
+.footer .sosial a {
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0,75;
+}
+.footer .sosial a:hover {
+  opacity: 0.9;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer ul li a:hover {
+  opacity: 1;
+}
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  font-weight: bold;
+}
+.sosial {
+  display: flex!important;
+  justify-content: center;
+}
+
+.sosial a {
+  text-decoration: none;
+  display: grid!important;
+  place-items: center;
+}
+
+/*
+ * -- PERTANYAAN MEDIA TABLET --
+ * Di tablet, kami ingin sedikit menyesuaikan ukuran spanduk
+ * teks dan tambahkan beberapa ruang vertikal di antara berbagai tabel harga
+ */
+@media (min-width: 767px) {
+  .banner-head {
+    font-size: 4em;
+  }
+  .pricing-table {
+    margin-bottom: 0;
+  }
+}
+
+/*
+ * -- PERTANYAAN MEDIA TELEPON --
+ * Di ponsel, kami ingin mengurangi tinggi dan ukuran font spanduk lebih jauh.
+ */
+@media (min-width: 600px) {
+  .banner {
+    height: 400px;
+  }
+  .banner-head {
+    font-size: 3em;
+  }
+}
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+.topnav a:hover {
+  background-color: white;
+  color: grey;
+}
+.topnav .left {
+  float: right;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link {
+  text-decoration: none;
+}
+.container .bennerRight {
+  float: left;
+  color: grey;
+  text-align: center;
+  padding: 0;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+    </style>
+</head>
+<Body>
+   
+<div class="container navbar">
+   <img src="Pudding.jpg" alt="..." width="70" class="bennerRight">
+  <div class="topnav">
+      <a href="#kontak" class="left">Tentang</a>
+      <a href="#harga" class="left">Produk</a>
+      <a href="#beranda" class="left">Beranda</a>
+   </div>
+</div>
+
+<div class="banner" id="beranda">
+    <h1 class="banner-head">
+        The main thing is never lost
+    </h1>
+</div>
+
+<div class="l-content" data-aos="zoom-in" id="harga">
+    <div class="pricing-tables pure-g">
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pricing-table pricing-table-free">
+                <div class="pricing-table-header">
+                    <h2>Pudding Sutera</h2>
+
+                    <span class="pricing-table-price">
+                        <br> <span>ordinary Pudding</span>
+                    </span>
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Menggunakan saus mangga sebagai topping di atas nya.</li>
+                    <li>Menggunakan pudding yang terbuat dari perpaduan susu serta agar-agar.</li>
+                    <li>Ukuran cup 150 ml</li>
+                </ul>
+
+                <button class="button-choose pure-button"><a href="https://wa.me/+6281285941130?text=Saya ingin memesan pudding *Sutera* Sebanyak : "target="_blank" class="link">Pesan</a></button>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3" data-aos="zoom-in">
+            <div class="pricing-table pricing-table-biz pricing-table-selected">
+                <div class="pricing-table-header">
+                    <h2>pudding Mangga</h2>
+
+                    <span class="pricing-table-price">
+                        <br> <span>Ordinary Pudding</span>
+                    </span>
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Menggunakan buah mangga segar sebagai topping.</li>
+                    <li>Dengan perpaduan vla keju di atasnya.</li>
+                    <li>Menggunakan pudding dengan rasa mangga dengan kualitas premium.</li>
+                    <li>Ukuran cup 150 ml</li>
+                </ul>
+
+                <button class="button-choose pure-button"><a href="https://wa.me/+6281285941130?text=Saya ingin memesan pudding *Mangga* Sebanyak : " target="_blank" class="link">Pesan</a></button>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3" data-aos="zoom-in">
+            <div class="pricing-table pricing-table-enterprise">
+                <div class="pricing-table-header">
+                    <h2>Pudding Coklat</h2>
+
+                    <span class="pricing-table-price">
+                        <br> <span>ordinary pudding</span>
+                    </span>
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Menggunakan bubuk remahan biskuit coklat diatas nya sebagai topping.</li>
+                    <li>Dengan tambahan vla susu diatasnya.</li>
+                    <li>Menggunakan pudding dengan rasa belgian chocolate.</li>
+                    <li>Ukuran cup 150 ml</li>
+                </ul>
+
+                <button class="button-choose pure-button"><a href="https://wa.me/+6281285941130?text=Saya ingin memesan pudding *Coklat* Sebanyak : " target="_blank" class="link">Pesan</a></button>
+            </div>
+        </div>
+    </div> <!-- akhir tabel harga -->
+<hr>
+    <div class="information pure-g">
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="l-box">
+                <h3 class="information-head">Sejarah Perusahaan</h3>
+                <p>
+                    <b>Berdiri Sejak Tahun 2022</b>
+                    Menjalankan  Bisnis Karena Terinsipirasi dari Perkembangan Zaman, Dimana Bisnis Sangat Penting Dan Berpengaruh Di Masa Yang Akan Datang.
+                </p>
+            </div>
+        </div>
+<hr>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="l-box">
+                <h3 class="information-head">Visi kami</h3>
+                <p>
+                    Membuat Konsumen Puas Dengan Produk Kami.
+                </p>
+            </div>
+        </div>
+<hr>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="l-box">
+                <h3 class="information-head">Misi kami</h3>
+                <p>
+                    Tujuan kami adalah mengsukseskan usaha kami kedepannya. Menyediakan produk dengan bahan bahan yang berkualitas dan premium.
+                </p>
+            </div>
+        </div>
+<hr>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="l-box">
+                <h3 class="information-head">Pencapaian Perusahaan</h3>
+                <p>
+                    Berdasarkan hasil analisis serta evaluasi kami dari penjualan yang ada, telah kami peroleh pendapat serta rating dari para konsumen. Dengan rating yang mencapai 4,5 / 5. Kami berharap kedepannya produk kami bisa lebih berkembang secara dinamis.
+                </p>
+            </div>
+        </div>
+    </div> <!-- informasi akhir -->
+</div> <!-- akhir l-konten -->
+<hr>
+   <!-- footer -->
+<div class="footerBody" id="kontak">
+    <section class="footer">
+      <div class="sosial">
+        <a href="https://www.instagram.com/ordinary_pudding?r=nametag"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      
+      <ul class="list">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Term</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+      </ul>
+      
+      <p class="copyright">
+        Ordinary Pudding @2022
+      </p>
+    </section>
+</div>
+   <!-- End footer -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+   
+</Body>
+</html>
