@@ -1,0 +1,364 @@
+ /*
+ * -- GAYA DASAR --
+ * Sebagian besar diwarisi dari Base, tetapi saya ingin mengubah beberapa.
+ */
+body {
+  color: #526066;
+}
+
+h2,
+h3 {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6em;
+}
+* {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+  font-family: Sans-Serif;
+}
+
+/*
+ * -- Gaya Tata Letak --
+ */
+.l-content {
+  margin: 0 auto;
+}
+
+.l-box {
+  padding: 0.5em 2em;
+}
+
+/*
+ * -- GAYA MENU --
+ menu memiliki bayangan kotak yang sangat samar.
+ */
+.pure-menu {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pure-menu-link {
+  padding: 0.5em 0.7em;
+}
+
+/*
+ * -- BANNER --
+ * Spanduk atas dengan judul. Dengan menggunakan kombinasi
+ * dari `display: table;` dan `display: table-cell;`, kita bisa
+ * -- BANNER --
+ * Spanduk atas dengan judul. Dengan menggunakan kombinasi
+ * dari `display: table;` dan `display: table-cell;`, kita bisa
+ * pusatkan teks secara vertikal.
+ */
+
+.banner {
+  background: transparent
+    url("images.jpeg")
+    0 0 no-repeat fixed;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
+  height: 200px;
+  width: 100%;
+  margin-bottom: 3em;
+  display: table;
+  border: 1px solid black;
+}
+
+.banner-head {
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 2em;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 1px 1px black;
+}
+
+/*
+ * -- HARGA TABEL WRAPPER --
+ * Elemen ini membungkus semua elemen tabel harga.
+ */
+.pricing-tables,
+.information {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.pricing-tables {
+  margin-bottom: 3.125em;
+  text-align: center;
+}
+
+/*
+ * -- TABEL HARGA --
+ * Setiap tabel harga memiliki kelas .pricing-table
+ */
+.pricing-table {
+  border: 1px solid #ddd;
+  margin: 0 0.5em 2em;
+  padding: 0 0 3em;
+}
+
+/*
+ * -- HARGA TABEL HEADER WARNA --
+ * Pilih warna yang berbeda berdasarkan jenis tabel harga.
+ */
+.pricing-table-free .pricing-table-header {
+  background-image: url("puddingsutera2.jpg");
+}
+
+.pricing-table-biz .pricing-table-header {
+  background-image: url('puddingsutera2.jpg');
+}
+
+/*
+ * -- KEPALA TABEL HARGA --
+ * Secara default, header berwarna hitam/putih, dan memiliki beberapa gaya untuk nama <h2>.
+ */
+.pricing-table-header {
+  background-image: url("puddingcoklat.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.pricing-table-header h2 {
+  margin: 0;
+  padding-top: 2em;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/*
+ * -- HARGA TABEL HARGA --
+ * Gaya untuk harga dan <span>per bulan</span> yang sesuai
+ */
+.pricing-table-price {
+  font-size: 6em;
+  margin: 0.2em 0 0;
+  font-weight: 100;
+}
+.pricing-table-price span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.2em;
+  padding-bottom: 2em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  *color: #fff;
+}
+
+/*
+ * -- DAFTAR TABEL HARGA --
+ * Setiap tabel harga memiliki <ul> yang dilambangkan dengan .pricing-table-list class
+ */
+.pricing-table-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/*
+ * -- ELEMEN DAFTAR TABEL HARGA --
+ * Gaya untuk elemen daftar individual dalam setiap tabel harga
+ */
+.pricing-table-list li {
+  padding: 0.8em 0;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+/*
+ * -- TOMBOL TABEL HARGA --
+ * Gaya untuk tombol "Pilih" di bagian bawah tabel harga.
+ * Ini mewarisi dari Tombol Murni.
+ */
+.button-choose {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  border-radius: 2em;
+  font-weight: bold;
+  position: relative;
+  bottom: -1.5em;
+}
+
+.information-head {
+  color: black;
+  font-weight: 500;
+}
+
+.footerBody {
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'sogoe UI';
+  font-weight: 400;
+  background-color: #ededed;
+}
+.footer {
+  padding: 40px 0;
+  background-color: #363636;
+}
+.footer .sosial {
+  text-align: center;
+  padding-bottom: 25px;
+  color: white;
+}
+.footer .sosial a {
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0,75;
+}
+.footer .sosial a:hover {
+  opacity: 0.9;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer ul li a:hover {
+  opacity: 1;
+}
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  font-weight: bold;
+}
+.sosial {
+  display: flex!important;
+  justify-content: center;
+}
+
+.sosial a {
+  text-decoration: none;
+  display: grid!important;
+  place-items: center;
+}
+  .banner-head {
+    font-size: 3em;
+  }
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+.topnav a:hover {
+  background-color: white;
+  color: grey;
+}
+.topnav .left {
+  float: right;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link {
+  text-decoration: none;
+}
+.container .bennerRight {
+  float: left;
+  color: grey;
+  text-align: center;
+  padding: 0;
+  text-decoration: none;
+  font-size: 17px;
+}
+/*
+ * -- PERTANYAAN MEDIA TABLET --
+ * Di tablet, kami ingin sedikit menyesuaikan ukuran spanduk
+ * teks dan tambahkan beberapa ruang vertikal di antara berbagai tabel harga
+ */
+@media (min-width: 767px) {
+  .banner-head {
+    font-size: 4em;
+  }
+  .pricing-table {
+    margin-bottom: 0;
+  }
+}
+
+/*
+ * -- PERTANYAAN MEDIA TELEPON --
+ * Di ponsel, kami ingin mengurangi tinggi dan ukuran font spanduk lebih jauh.
+ */
+@media (min-width: 600px) {
+  .banner {
+    height: 400px;
+  }
+  .banner-head {
+    font-size: 3em;
+  }
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+.topnav a:hover {
+  background-color: white;
+  color: grey;
+}
+.topnav .left {
+  float: right;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link {
+  text-decoration: none;
+}
+.container .bennerRight {
+  float: left;
+  color: grey;
+  text-align: center;
+  padding: 0;
+  text-decoration: none;
+  font-size: 17px;
+}
+div.pricing-tables.pure-g {
+  display: flex;
+}
+
+}
